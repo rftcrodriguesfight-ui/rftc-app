@@ -231,6 +231,7 @@ footer{
 }
 
 @media(max-width:600px){
+
   .logo{
     font-size:42px;
   }
@@ -275,7 +276,9 @@ footer{
 
 <header>
   <div class="logo">RFTC</div>
-  <div class="sublogo">RODRIGUES FIGHT TRAINING CENTER</div>
+  <div class="sublogo">
+    RODRIGUES FIGHT TRAINING CENTER
+  </div>
 </header>
 
 <div class="container">
@@ -290,6 +293,7 @@ Bem-vindo ao sistema de gestão da equipe.
 </div>
 
 <div class="stats">
+
   <div class="stat">
     <div class="stat-number" id="totalAcademias">0</div>
     <div>Academia</div>
@@ -299,52 +303,77 @@ Bem-vindo ao sistema de gestão da equipe.
     <div class="stat-number" id="totalAlunos">0</div>
     <div>Alunos</div>
   </div>
+
 </div>
 
 <div class="dashboard">
 
 <div class="card full" onclick="abrir('academia')">
+
   <div class="icon">📊</div>
+
   <h2>Dashboard</h2>
+
   <p>
   Controle da academia, alunos, treinos,
   pagamentos, check-in e graduação.
   </p>
+
 </div>
 
 <div class="card" onclick="abrir('academia')">
+
   <div class="icon">🏢</div>
+
   <h2>Academia</h2>
+
 </div>
 
 <div class="card" onclick="abrir('alunos')">
+
   <div class="icon">👤</div>
+
   <h2>Alunos</h2>
+
 </div>
 
 <div class="card" onclick="abrir('treinos')">
+
   <div class="icon">🥊</div>
+
   <h2>Treinos</h2>
+
 </div>
 
 <div class="card" onclick="abrir('financeiro')">
+
   <div class="icon">💰</div>
+
   <h2>Financeiro</h2>
+
 </div>
 
 <div class="card" onclick="abrir('checkin')">
+
   <div class="icon">✅</div>
+
   <h2>Check-in</h2>
+
 </div>
 
 <div class="card" onclick="abrir('graduacao')">
+
   <div class="icon">🏆</div>
+
   <h2>Graduação</h2>
-</div>
 
 </div>
 
-<button class="btn danger" onclick="sair()">SAIR</button>
+</div>
+
+<button class="btn danger" onclick="sair()">
+SAIR
+</button>
 
 </section>
 
@@ -352,7 +381,9 @@ Bem-vindo ao sistema de gestão da equipe.
 <!-- ACADEMIA -->
 <section id="academia" class="screen">
 
-<button class="back" onclick="voltar()">← Voltar</button>
+<button class="back" onclick="voltar()">
+← Voltar
+</button>
 
 <h1>🏢 Cadastro da Academia</h1>
 
@@ -361,19 +392,39 @@ Bem-vindo ao sistema de gestão da equipe.
 <h2>Dados da academia</h2>
 
 <label>Nome da academia</label>
-<input id="nomeAcademia" placeholder="Ex.: RFTC Rodrigues Fight Training Center">
+
+<input
+id="nomeAcademia"
+placeholder="Ex.: RFTC Rodrigues Fight Training Center"
+>
 
 <label>Responsável</label>
-<input id="responsavelAcademia" placeholder="Nome do responsável">
+
+<input
+id="responsavelAcademia"
+placeholder="Nome do responsável"
+>
 
 <label>WhatsApp</label>
-<input id="whatsappAcademia" placeholder="(51) 99999-9999">
+
+<input
+id="whatsappAcademia"
+placeholder="(51) 99999-9999"
+>
 
 <label>Endereço</label>
-<input id="enderecoAcademia" placeholder="Rua, número">
+
+<input
+id="enderecoAcademia"
+placeholder="Rua, número"
+>
 
 <label>Cidade</label>
-<input id="cidadeAcademia" placeholder="Cidade">
+
+<input
+id="cidadeAcademia"
+placeholder="Cidade"
+>
 
 <button class="btn" onclick="salvarAcademia()">
 SALVAR ACADEMIA
@@ -382,8 +433,11 @@ SALVAR ACADEMIA
 </div>
 
 <div class="form">
+
 <h2>Academia cadastrada</h2>
+
 <div id="listaAcademia" class="list"></div>
+
 </div>
 
 </section>
@@ -392,7 +446,9 @@ SALVAR ACADEMIA
 <!-- ALUNOS -->
 <section id="alunos" class="screen">
 
-<button class="back" onclick="voltar()">← Voltar</button>
+<button class="back" onclick="voltar()">
+← Voltar
+</button>
 
 <h1>👤 Cadastro de Alunos</h1>
 
@@ -401,31 +457,70 @@ SALVAR ACADEMIA
 <h2>Novo aluno</h2>
 
 <label>Nome completo</label>
-<input id="nomeAluno" placeholder="Nome do aluno">
+
+<input
+id="nomeAluno"
+placeholder="Nome do aluno"
+>
 
 <label>WhatsApp</label>
-<input id="whatsappAluno" placeholder="(51) 99999-9999">
+
+<input
+id="whatsappAluno"
+placeholder="(51) 99999-9999"
+>
 
 <label>Data de nascimento</label>
-<input id="nascimentoAluno" type="date">
+
+<input
+id="nascimentoAluno"
+type="date"
+>
 
 <label>Modalidade</label>
+
 <select id="modalidadeAluno">
-<option value="Muay Thai">Muay Thai</option>
-<option value="Boxe">Boxe</option>
-<option value="Corrida">Corrida</option>
-<option value="Musculação">Musculação</option>
+
+<option value="Muay Thai">
+Muay Thai
+</option>
+
+<option value="Boxe">
+Boxe
+</option>
+
+<option value="Corrida">
+Corrida
+</option>
+
+<option value="Musculação">
+Musculação
+</option>
+
 </select>
 
 <label>Graduação</label>
+
 <select id="graduacaoAluno">
-<option>Iniciante</option>
+
 <option>Branca</option>
-<option>Amarela</option>
-<option>Verde</option>
-<option>Azul</option>
+
+<option>Branca ponta vermelha</option>
+
 <option>Vermelha</option>
+
+<option>Vermelha ponta azul clara</option>
+
+<option>Azul clara</option>
+
+<option>Azul clara ponta azul escura</option>
+
+<option>Azul escura</option>
+
+<option>Azul escura ponta preta</option>
+
 <option>Preta</option>
+
 </select>
 
 <button class="btn" onclick="salvarAluno()">
@@ -448,7 +543,9 @@ CADASTRAR ALUNO
 <!-- TREINOS -->
 <section id="treinos" class="screen">
 
-<button class="back" onclick="voltar()">← Voltar</button>
+<button class="back" onclick="voltar()">
+← Voltar
+</button>
 
 <h1>🥊 Treinos</h1>
 
@@ -457,12 +554,20 @@ CADASTRAR ALUNO
 <h2>Controle de treinos</h2>
 
 <p style="color:#aaa;line-height:1.5;">
-Aqui vamos colocar posteriormente o calendário,
-horários, turmas, professores e planejamento dos treinos.
+
+Aqui vamos colocar o calendário,
+horários, turmas, professores e
+planejamento dos treinos.
+
 </p>
 
-<button class="btn" onclick="alert('Módulo de treinos preparado para a próxima etapa.')">
+<button
+class="btn"
+onclick="alert('Módulo de treinos preparado para a próxima etapa.')"
+>
+
 ABRIR TREINOS
+
 </button>
 
 </div>
@@ -473,7 +578,9 @@ ABRIR TREINOS
 <!-- FINANCEIRO -->
 <section id="financeiro" class="screen">
 
-<button class="back" onclick="voltar()">← Voltar</button>
+<button class="back" onclick="voltar()">
+← Voltar
+</button>
 
 <h1>💰 Financeiro</h1>
 
@@ -482,12 +589,20 @@ ABRIR TREINOS
 <h2>Controle financeiro</h2>
 
 <p style="color:#aaa;line-height:1.5;">
+
 Nesta área vamos colocar mensalidades,
-planos, pagamentos, vencimentos e situação financeira dos alunos.
+planos, pagamentos, vencimentos e
+situação financeira dos alunos.
+
 </p>
 
-<button class="btn" onclick="alert('Módulo financeiro preparado para a próxima etapa.')">
+<button
+class="btn"
+onclick="alert('Módulo financeiro preparado para a próxima etapa.')"
+>
+
 ABRIR FINANCEIRO
+
 </button>
 
 </div>
@@ -498,7 +613,9 @@ ABRIR FINANCEIRO
 <!-- CHECK-IN -->
 <section id="checkin" class="screen">
 
-<button class="back" onclick="voltar()">← Voltar</button>
+<button class="back" onclick="voltar()">
+← Voltar
+</button>
 
 <h1>✅ Check-in</h1>
 
@@ -507,12 +624,20 @@ ABRIR FINANCEIRO
 <h2>Presença dos alunos</h2>
 
 <p style="color:#aaa;line-height:1.5;">
-Nesta área vamos registrar a presença dos alunos
-nos treinos e criar o histórico de frequência.
+
+Nesta área vamos registrar a presença
+dos alunos nos treinos e criar o
+histórico de frequência.
+
 </p>
 
-<button class="btn" onclick="alert('Módulo de check-in preparado para a próxima etapa.')">
+<button
+class="btn"
+onclick="alert('Módulo de check-in preparado para a próxima etapa.')"
+>
+
 REGISTRAR CHECK-IN
+
 </button>
 
 </div>
@@ -523,22 +648,57 @@ REGISTRAR CHECK-IN
 <!-- GRADUAÇÃO -->
 <section id="graduacao" class="screen">
 
-<button class="back" onclick="voltar()">← Voltar</button>
+<button class="back" onclick="voltar()">
+← Voltar
+</button>
 
 <h1>🏆 Graduação</h1>
 
 <div class="form">
 
-<h2>Sistema de graduação</h2>
+<h2>Sistema de graduação Muay Thai</h2>
 
-<p style="color:#aaa;line-height:1.5;">
-Aqui vamos controlar a evolução dos alunos,
-graduações, datas de exame e histórico.
-</p>
+<div class="item">
 
-<button class="btn" onclick="alert('Módulo de graduação preparado para a próxima etapa.')">
-ABRIR GRADUAÇÃO
-</button>
+<strong>🥋 Sistema RFTC</strong>
+
+<small>
+1. Branca
+</small>
+
+<small>
+2. Branca ponta vermelha
+</small>
+
+<small>
+3. Vermelha
+</small>
+
+<small>
+4. Vermelha ponta azul clara
+</small>
+
+<small>
+5. Azul clara
+</small>
+
+<small>
+6. Azul clara ponta azul escura
+</small>
+
+<small>
+7. Azul escura
+</small>
+
+<small>
+8. Azul escura ponta preta
+</small>
+
+<small>
+9. Preta
+</small>
+
+</div>
 
 </div>
 
@@ -547,37 +707,57 @@ ABRIR GRADUAÇÃO
 </div>
 
 <footer>
+
 RFTC – Rodrigues Fight Training Center<br>
+
 Sistema de Gestão
+
 </footer>
 
 
 <script>
 
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
 function abrir(tela){
 
   document.querySelectorAll('.screen')
-  .forEach(el => el.classList.remove('active'));
+  .forEach(function(el){
+
+    el.classList.remove('active');
+
+  });
 
   document.getElementById(tela)
   .classList.add('active');
 
   if(tela === 'academia'){
+
     carregarAcademia();
+
   }
 
   if(tela === 'alunos'){
+
     carregarAlunos();
+
   }
 
   window.scrollTo(0,0);
+
 }
 
 
 function voltar(){
 
   document.querySelectorAll('.screen')
-  .forEach(el => el.classList.remove('active'));
+  .forEach(function(el){
+
+    el.classList.remove('active');
+
+  });
 
   document.getElementById('home')
   .classList.add('active');
@@ -585,6 +765,7 @@ function voltar(){
   atualizarContadores();
 
   window.scrollTo(0,0);
+
 }
 
 
@@ -596,19 +777,25 @@ function salvarAcademia(){
 
   const academia = {
 
-    nome:document.getElementById('nomeAcademia').value.trim(),
+    nome:
+    document.getElementById('nomeAcademia')
+    .value.trim(),
 
     responsavel:
-    document.getElementById('responsavelAcademia').value.trim(),
+    document.getElementById('responsavelAcademia')
+    .value.trim(),
 
     whatsapp:
-    document.getElementById('whatsappAcademia').value.trim(),
+    document.getElementById('whatsappAcademia')
+    .value.trim(),
 
     endereco:
-    document.getElementById('enderecoAcademia').value.trim(),
+    document.getElementById('enderecoAcademia')
+    .value.trim(),
 
     cidade:
-    document.getElementById('cidadeAcademia').value.trim()
+    document.getElementById('cidadeAcademia')
+    .value.trim()
 
   };
 
@@ -617,6 +804,7 @@ function salvarAcademia(){
     alert('Digite o nome da academia.');
 
     return;
+
   }
 
   localStorage.setItem(
@@ -629,6 +817,7 @@ function salvarAcademia(){
   carregarAcademia();
 
   atualizarContadores();
+
 }
 
 
@@ -646,9 +835,11 @@ function carregarAcademia(){
     '<div class="empty">Nenhuma academia cadastrada.</div>';
 
     return;
+
   }
 
-  const academia = JSON.parse(dados);
+  const academia =
+  JSON.parse(dados);
 
   document.getElementById('nomeAcademia').value =
   academia.nome || '';
@@ -672,24 +863,29 @@ function carregarAcademia(){
     <strong>${academia.nome}</strong>
 
     <small>
-    Responsável: ${academia.responsavel || '-'}
+    Responsável:
+    ${academia.responsavel || '-'}
     </small>
 
     <small>
-    WhatsApp: ${academia.whatsapp || '-'}
+    WhatsApp:
+    ${academia.whatsapp || '-'}
     </small>
 
     <small>
-    Endereço: ${academia.endereco || '-'}
+    Endereço:
+    ${academia.endereco || '-'}
     </small>
 
     <small>
-    Cidade: ${academia.cidade || '-'}
+    Cidade:
+    ${academia.cidade || '-'}
     </small>
 
   </div>
 
   `;
+
 }
 
 
@@ -700,13 +896,15 @@ function carregarAcademia(){
 function salvarAluno(){
 
   const nome =
-  document.getElementById('nomeAluno').value.trim();
+  document.getElementById('nomeAluno')
+  .value.trim();
 
   if(!nome){
 
     alert('Digite o nome do aluno.');
 
     return;
+
   }
 
   const alunos =
@@ -721,16 +919,20 @@ function salvarAluno(){
     nome:nome,
 
     whatsapp:
-    document.getElementById('whatsappAluno').value.trim(),
+    document.getElementById('whatsappAluno')
+    .value.trim(),
 
     nascimento:
-    document.getElementById('nascimentoAluno').value,
+    document.getElementById('nascimentoAluno')
+    .value,
 
     modalidade:
-    document.getElementById('modalidadeAluno').value,
+    document.getElementById('modalidadeAluno')
+    .value,
 
     graduacao:
-    document.getElementById('graduacaoAluno').value
+    document.getElementById('graduacaoAluno')
+    .value
 
   };
 
@@ -742,7 +944,9 @@ function salvarAluno(){
   );
 
   document.getElementById('nomeAluno').value='';
+
   document.getElementById('whatsappAluno').value='';
+
   document.getElementById('nascimentoAluno').value='';
 
   alert('Aluno cadastrado com sucesso!');
@@ -750,6 +954,7 @@ function salvarAluno(){
   carregarAlunos();
 
   atualizarContadores();
+
 }
 
 
@@ -769,11 +974,12 @@ function carregarAlunos(){
     '<div class="empty">Nenhum aluno cadastrado.</div>';
 
     return;
+
   }
 
-  lista.innerHTML = '';
+  lista.innerHTML='';
 
-  alunos.forEach(aluno => {
+  alunos.forEach(function(aluno){
 
     const item =
     document.createElement('div');
@@ -782,7 +988,9 @@ function carregarAlunos(){
 
     item.innerHTML = `
 
-      <strong>${aluno.nome}</strong>
+      <strong>
+      ${aluno.nome}
+      </strong>
 
       <small>
       📱 ${aluno.whatsapp || 'WhatsApp não informado'}
@@ -793,13 +1001,16 @@ function carregarAlunos(){
       </small>
 
       <small>
-      🏆 Graduação: ${aluno.graduacao}
+      🏆 Graduação:
+      ${aluno.graduacao}
       </small>
 
       <button
       class="btn danger"
       onclick="excluirAluno(${aluno.id})">
+
       EXCLUIR ALUNO
+
       </button>
 
     `;
@@ -807,13 +1018,16 @@ function carregarAlunos(){
     lista.appendChild(item);
 
   });
+
 }
 
 
 function excluirAluno(id){
 
   if(!confirm('Deseja excluir este aluno?')){
+
     return;
+
   }
 
   let alunos =
@@ -822,7 +1036,11 @@ function excluirAluno(id){
   );
 
   alunos =
-  alunos.filter(aluno => aluno.id !== id);
+  alunos.filter(function(aluno){
+
+    return aluno.id !== id;
+
+  });
 
   localStorage.setItem(
     'rftc_alunos',
@@ -832,6 +1050,7 @@ function excluirAluno(id){
   carregarAlunos();
 
   atualizarContadores();
+
 }
 
 
@@ -850,10 +1069,13 @@ function atualizarContadores(){
   );
 
   document.getElementById('totalAcademias')
-  .textContent = academia ? '1' : '0';
+  .textContent =
+  academia ? '1' : '0';
 
   document.getElementById('totalAlunos')
-  .textContent = alunos.length;
+  .textContent =
+  alunos.length;
+
 }
 
 
@@ -870,10 +1092,13 @@ function sair(){
     location.reload();
 
   }
+
 }
 
 
-/* INICIALIZAÇÃO */
+/* =========================
+   INICIALIZAÇÃO
+========================= */
 
 atualizarContadores();
 
