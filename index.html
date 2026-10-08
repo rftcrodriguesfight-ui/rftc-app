@@ -9,225 +9,152 @@
 <style>
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial,Helvetica,sans-serif;
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-  background:#0b0b0b;
-  color:#fff;
+background:#0b0b0b;
+color:white;
+min-height:100vh;
 }
 
 .app{
-  max-width:500px;
-  min-height:100vh;
-  margin:auto;
-  background:#151515;
+max-width:500px;
+margin:auto;
+min-height:100vh;
+background:#151515;
 }
 
 .header{
-  background:#000;
-  text-align:center;
-  padding:30px 20px;
-  border-bottom:1px solid #333;
+background:#000;
+padding:28px 20px;
+text-align:center;
+border-bottom:2px solid #d4af37;
 }
 
 .logo{
-  font-size:48px;
-  font-weight:900;
-  letter-spacing:4px;
+font-size:32px;
+font-weight:bold;
+letter-spacing:2px;
 }
 
-.nome{
-  color:#aaa;
-  margin-top:8px;
-  font-size:14px;
+.subtitulo{
+color:#d4af37;
+margin-top:6px;
+font-size:14px;
 }
 
-main{
-  padding:22px;
-  padding-bottom:100px;
+.conteudo{
+padding:25px 20px;
 }
 
-.tela{
-  display:none;
+.titulo{
+font-size:25px;
+font-weight:bold;
+margin-bottom:8px;
 }
 
-.tela.ativa{
-  display:block;
-}
-
-h1{
-  font-size:30px;
-  margin-bottom:10px;
-}
-
-h2{
-  font-size:21px;
-  margin-bottom:15px;
-}
-
-p{
-  color:#aaa;
-  line-height:1.5;
+.descricao{
+color:#aaa;
+margin-bottom:25px;
+line-height:1.5;
 }
 
 .card{
-  background:#222;
-  border:1px solid #333;
-  border-radius:16px;
-  padding:20px;
-  margin:14px 0;
+background:#202020;
+border:1px solid #333;
+border-radius:14px;
+padding:20px;
+margin-bottom:15px;
 }
 
-.card-titulo{
-  font-size:19px;
-  font-weight:bold;
-  margin-bottom:7px;
+.card h2{
+font-size:20px;
+margin-bottom:8px;
 }
 
-.card-info{
-  color:#aaa;
-  font-size:14px;
+.card p{
+color:#aaa;
+font-size:14px;
+line-height:1.5;
 }
 
-.destaque{
-  background:#fff;
-  color:#111;
-  border-radius:18px;
-  padding:24px;
-  margin-bottom:20px;
+.botao{
+width:100%;
+padding:16px;
+border:none;
+border-radius:10px;
+margin-top:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
 }
 
-.destaque h1{
-  color:#111;
+.principal{
+background:#d4af37;
+color:#000;
 }
 
-.destaque p{
-  color:#555;
+.secundario{
+background:#292929;
+color:white;
+border:1px solid #444;
 }
 
-button{
-  width:100%;
-  border:0;
-  border-radius:12px;
-  padding:16px;
-  font-size:16px;
-  font-weight:bold;
-  margin-top:10px;
-  cursor:pointer;
-  background:#fff;
-  color:#111;
-}
-
-button.secundario{
-  background:#292929;
-  color:#fff;
-  border:1px solid #444;
-}
-
-button.voltar{
-  width:auto;
-  padding:10px 16px;
-  background:#222;
-  color:#aaa;
-  margin-bottom:20px;
+.login{
+display:none;
 }
 
 input{
-  width:100%;
-  padding:16px;
-  margin:7px 0;
-  background:#222;
-  color:#fff;
-  border:1px solid #444;
-  border-radius:11px;
-  font-size:16px;
-  outline:none;
+width:100%;
+padding:15px;
+margin-top:10px;
+background:#101010;
+border:1px solid #444;
+border-radius:9px;
+color:white;
+font-size:16px;
 }
 
 input:focus{
-  border-color:#fff;
+outline:none;
+border-color:#d4af37;
 }
 
-.mensagem{
-  text-align:center;
-  color:#aaa;
-  margin-top:15px;
-  min-height:22px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.grid .card{
-  margin:0;
-  min-height:120px;
+.dashboard{
+display:none;
 }
 
 .menu{
-  position:fixed;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:100%;
-  max-width:500px;
-  display:flex;
-  background:#050505;
-  border-top:1px solid #333;
-  padding:7px;
-  z-index:100;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:20px;
 }
 
 .menu button{
-  background:transparent;
-  color:#777;
-  margin:0;
-  padding:8px 3px;
-  font-size:12px;
+background:#222;
+color:white;
+border:1px solid #444;
+border-radius:12px;
+padding:22px 10px;
+font-size:15px;
 }
 
-.menu button.ativo{
-  color:#fff;
+.menu span{
+display:block;
+font-size:25px;
+margin-bottom:8px;
 }
 
-.icone{
-  display:block;
-  font-size:22px;
-  margin-bottom:4px;
-}
-
-.status{
-  display:inline-block;
-  background:#252525;
-  color:#aaa;
-  padding:6px 10px;
-  border-radius:20px;
-  font-size:12px;
-  margin-top:8px;
-}
-
-hr{
-  border:0;
-  border-top:1px solid #333;
-  margin:20px 0;
-}
-
-@media(max-width:350px){
-
-.logo{
-  font-size:40px;
-}
-
-.grid{
-  grid-template-columns:1fr;
-}
-
+.rodape{
+text-align:center;
+color:#666;
+font-size:12px;
+padding:30px 10px;
 }
 
 </style>
@@ -238,714 +165,209 @@ hr{
 <div class="app">
 
 <header class="header">
-
 <div class="logo">RFTC</div>
-
-<div class="nome">
-Rodrigues Fight Training Center
-</div>
-
+<div class="subtitulo">RODRIGUES FIGHT TRAINING CENTER</div>
 </header>
 
 
-<main>
+<!-- INÍCIO -->
 
+<section class="conteudo" id="inicio">
 
-<!-- ================= INÍCIO ================= -->
+<div class="titulo">
+Bem-vindo ao RFTC APP
+</div>
 
-<section id="inicio" class="tela ativa">
+<div class="descricao">
+Sistema de gestão e treinamento do Rodrigues Fight Training Center.
+</div>
 
-<div class="destaque">
-
-<h1>RFTC APP</h1>
-
+<div class="card">
+<h2>🥊 Muay Thai</h2>
 <p>
-Treinamento, presença e acompanhamento em um só lugar.
+Treinos, graduação, alunos e acompanhamento da equipe.
 </p>
-
 </div>
 
+<div class="card">
+<h2>🏃 Corrida</h2>
+<p>
+Organização dos treinos e acompanhamento dos atletas.
+</p>
+</div>
 
-<div class="grid">
+<div class="card">
+<h2>💪 Preparação Física</h2>
+<p>
+Controle de treinos e evolução dos alunos.
+</p>
+</div>
+
+<button class="botao principal" onclick="abrirLogin()">
+ENTRAR NO RFTC APP
+</button>
+
+</section>
+
+
+<!-- LOGIN -->
+
+<section class="conteudo login" id="login">
+
+<div class="titulo">
+Acesso RFTC
+</div>
+
+<div class="descricao">
+Entre no sistema para acessar sua área.
+</div>
 
 <div class="card">
 
-<div class="card-titulo">🥊</div>
+<label>Email</label>
 
-<div class="card-info">
-Muay Thai
-</div>
+<input
+type="email"
+id="email"
+placeholder="Digite seu email"
+>
 
-</div>
+<label style="display:block;margin-top:15px;">
+Senha
+</label>
 
+<input
+type="password"
+id="senha"
+placeholder="Digite sua senha"
+>
 
-<div class="card">
-
-<div class="card-titulo">🏃</div>
-
-<div class="card-info">
-Corrida
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-titulo">💪</div>
-
-<div class="card-info">
-Musculação
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-titulo">🏆</div>
-
-<div class="card-info">
-Performance
-</div>
-
-</div>
-
-</div>
-
-
-<button onclick="abrir('login')">
+<button class="botao principal" onclick="entrar()">
 ENTRAR
 </button>
 
-
-<button class="secundario" onclick="abrir('cadastro')">
-CRIAR CONTA
+<button class="botao secundario" onclick="voltar()">
+VOLTAR
 </button>
+
+</div>
 
 </section>
 
 
+<!-- DASHBOARD -->
 
-<!-- ================= LOGIN ================= -->
+<section class="conteudo dashboard" id="dashboard">
 
-<section id="login" class="tela">
+<div class="titulo">
+Painel RFTC
+</div>
 
-<button class="voltar" onclick="abrir('inicio')">
-← Voltar
-</button>
+<div class="descricao">
+Bem-vindo ao sistema de gestão da equipe.
+</div>
 
-<h1>Entrar</h1>
-
+<div class="card">
+<h2>📊 Dashboard</h2>
 <p>
-Acesse sua conta RFTC.
+Aqui ficará o controle completo da academia, alunos e treinamentos.
 </p>
+</div>
 
-<br>
+<div class="menu">
 
-<input
-id="loginEmail"
-type="email"
-placeholder="E-mail"
->
-
-<input
-id="loginSenha"
-type="password"
-placeholder="Senha"
->
-
-<button onclick="login()">
-ENTRAR
+<button onclick="alert('Área de Academias')">
+<span>🏢</span>
+Academia
 </button>
 
-<button
-class="secundario"
-onclick="abrir('cadastro')">
-
-CRIAR CONTA
-
+<button onclick="alert('Área de Alunos')">
+<span>👤</span>
+Alunos
 </button>
 
-<div
-id="msgLogin"
-class="mensagem">
-</div>
-
-</section>
-
-
-
-<!-- ================= CADASTRO ================= -->
-
-<section id="cadastro" class="tela">
-
-<button
-class="voltar"
-onclick="abrir('inicio')">
-
-← Voltar
-
-</button>
-
-<h1>Criar conta</h1>
-
-<p>
-Faça seu cadastro no RFTC APP.
-</p>
-
-<br>
-
-<input
-id="cadNome"
-type="text"
-placeholder="Nome completo"
->
-
-<input
-id="cadEmail"
-type="email"
-placeholder="E-mail"
->
-
-<input
-id="cadSenha"
-type="password"
-placeholder="Senha"
->
-
-<button onclick="cadastrar()">
-CRIAR CONTA
-</button>
-
-<div
-id="msgCadastro"
-class="mensagem">
-</div>
-
-</section>
-
-
-
-<!-- ================= PAINEL ================= -->
-
-<section id="painel" class="tela">
-
-<h1 id="saudacao">
-Olá! 👋
-</h1>
-
-<p>
-Bem-vindo ao seu espaço RFTC.
-</p>
-
-<br>
-
-
-<div class="card">
-
-<div class="card-titulo">
-👤 Meu Perfil
-</div>
-
-<div class="card-info">
-Consulte seus dados cadastrais.
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-titulo">
-🥊 Meus Treinos
-</div>
-
-<div class="card-info">
-Acompanhe seus treinamentos.
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-titulo">
-✅ Check-in
-</div>
-
-<div class="card-info">
-Registre sua presença no treino.
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-titulo">
-💰 Mensalidade
-</div>
-
-<div class="card-info">
-Consulte sua situação.
-</div>
-
-<span class="status">
-Sistema em construção
-</span>
-
-</div>
-
-
-<button
-class="secundario"
-onclick="sair()">
-
-SAIR DA CONTA
-
-</button>
-
-</section>
-
-
-
-<!-- ================= TREINOS ================= -->
-
-<section id="treinos" class="tela">
-
-<button
-class="voltar"
-onclick="abrir('painel')">
-
-← Voltar
-
-</button>
-
-<h1>🥊 Treinos</h1>
-
-<p>
-Área de treinamento RFTC.
-</p>
-
-<br>
-
-<div class="card">
-
-<div class="card-titulo">
-Muay Thai
-</div>
-
-<div class="card-info">
-Treinamento técnico e preparação física.
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-titulo">
-🏃 Corrida
-</div>
-
-<div class="card-info">
-Treinamento de corrida e resistência.
-</div>
-
-</div>
-
-<div class="card">
-
-<div class="card-titulo">
-💪 Preparação Física
-</div>
-
-<div class="card-info">
-Força, condicionamento e desempenho.
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= CHECK-IN ================= -->
-
-<section id="checkin" class="tela">
-
-<button
-class="voltar"
-onclick="abrir('painel')">
-
-← Voltar
-
-</button>
-
-<h1>✅ Check-in</h1>
-
-<p>
-Registre sua presença no treinamento.
-</p>
-
-<br>
-
-<div class="destaque">
-
-<h2>Presença</h2>
-
-<p id="checkStatus">
-Nenhum check-in realizado hoje.
-</p>
-
-</div>
-
-<button onclick="checkin()">
-
-CONFIRMAR PRESENÇA
-
-</button>
-
-</section>
-
-
-
-<!-- ================= PERFIL ================= -->
-
-<section id="perfil" class="tela">
-
-<button
-class="voltar"
-onclick="abrir('painel')">
-
-← Voltar
-
-</button>
-
-<h1>👤 Meu Perfil</h1>
-
-<br>
-
-<div class="card">
-
-<div class="card-titulo">
-Nome
-</div>
-
-<div
-id="perfilNome"
-class="card-info">
--
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-titulo">
-E-mail
-</div>
-
-<div
-id="perfilEmail"
-class="card-info">
--
-</div>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- ================= MENU ================= -->
-
-<nav class="menu">
-
-<button
-id="btnInicio"
-onclick="abrir('inicio')">
-
-<span class="icone">🏠</span>
-
-Início
-
-</button>
-
-
-<button
-id="btnPainel"
-onclick="abrir('painel')">
-
-<span class="icone">👤</span>
-
-Área
-
-</button>
-
-
-<button
-id="btnTreinos"
-onclick="abrir('treinos')">
-
-<span class="icone">🥊</span>
-
+<button onclick="alert('Área de Treinos')">
+<span>🥊</span>
 Treinos
-
 </button>
 
+<button onclick="alert('Área financeira')">
+<span>💰</span>
+Financeiro
+</button>
 
-<button
-id="btnCheckin"
-onclick="abrir('checkin')">
-
-<span class="icone">✅</span>
-
+<button onclick="alert('Check-in dos alunos')">
+<span>✅</span>
 Check-in
-
 </button>
 
-</nav>
+<button onclick="alert('Graduação Muay Thai')">
+<span>🏆</span>
+Graduação
+</button>
 
 </div>
 
+<button class="botao secundario" onclick="sair()">
+SAIR
+</button>
+
+</section>
+
+
+<div class="rodape">
+RFTC – Rodrigues Fight Training Center<br>
+Sistema de Gestão
+</div>
+
+</div>
 
 
 <script>
 
+function abrirLogin(){
 
-/* ================= NAVEGAÇÃO ================= */
+document.getElementById("inicio").style.display="none";
 
-function abrir(tela){
-
-document
-.querySelectorAll('.tela')
-.forEach(function(item){
-
-item.classList.remove('ativa');
-
-});
-
-
-document
-.getElementById(tela)
-.classList.add('ativa');
-
-
-document
-.querySelectorAll('.menu button')
-.forEach(function(botao){
-
-botao.classList.remove('ativo');
-
-});
-
-
-if(tela === 'inicio')
-document
-.getElementById('btnInicio')
-.classList.add('ativo');
-
-
-if(tela === 'painel')
-document
-.getElementById('btnPainel')
-.classList.add('ativo');
-
-
-if(tela === 'treinos')
-document
-.getElementById('btnTreinos')
-.classList.add('ativo');
-
-
-if(tela === 'checkin')
-document
-.getElementById('btnCheckin')
-.classList.add('ativo');
-
-
-window.scrollTo(0,0);
+document.getElementById("login").style.display="block";
 
 }
 
+function voltar(){
 
+document.getElementById("login").style.display="none";
 
-/* ================= CADASTRO ================= */
+document.getElementById("inicio").style.display="block";
 
-function cadastrar(){
+}
 
-let nome =
-document.getElementById('cadNome').value.trim();
+function entrar(){
 
-let email =
-document.getElementById('cadEmail').value.trim();
+let email=document.getElementById("email").value;
 
-let senha =
-document.getElementById('cadSenha').value;
+let senha=document.getElementById("senha").value;
 
+if(email==="" || senha===""){
 
-let msg =
-document.getElementById('msgCadastro');
-
-
-if(!nome || !email || !senha){
-
-msg.innerText =
-'Preencha todos os campos.';
+alert("Digite seu email e sua senha.");
 
 return;
 
 }
 
+document.getElementById("login").style.display="none";
 
-localStorage.setItem(
-'rftc_nome',
-nome
-);
-
-localStorage.setItem(
-'rftc_email',
-email
-);
-
-localStorage.setItem(
-'rftc_senha',
-senha
-);
-
-
-msg.innerText =
-'Conta criada com sucesso!';
-
-
-setTimeout(function(){
-
-document
-.getElementById('loginEmail')
-.value = email;
-
-abrir('login');
-
-},1000);
+document.getElementById("dashboard").style.display="block";
 
 }
-
-
-
-/* ================= LOGIN ================= */
-
-function login(){
-
-let email =
-document.getElementById('loginEmail').value.trim();
-
-let senha =
-document.getElementById('loginSenha').value;
-
-
-let emailSalvo =
-localStorage.getItem('rftc_email');
-
-let senhaSalva =
-localStorage.getItem('rftc_senha');
-
-let nomeSalvo =
-localStorage.getItem('rftc_nome');
-
-
-let msg =
-document.getElementById('msgLogin');
-
-
-if(!email || !senha){
-
-msg.innerText =
-'Digite seu e-mail e sua senha.';
-
-return;
-
-}
-
-
-if(
-email === emailSalvo &&
-senha === senhaSalva
-){
-
-document
-.getElementById('saudacao')
-.innerText =
-'Olá, ' + nomeSalvo + '! 👋';
-
-
-document
-.getElementById('perfilNome')
-.innerText =
-nomeSalvo;
-
-
-document
-.getElementById('perfilEmail')
-.innerText =
-email;
-
-
-msg.innerText = '';
-
-abrir('painel');
-
-}else{
-
-msg.innerText =
-'E-mail ou senha incorretos.';
-
-}
-
-}
-
-
-
-/* ================= CHECK-IN ================= */
-
-function checkin(){
-
-let agora =
-new Date();
-
-let hora =
-agora.toLocaleTimeString(
-'pt-BR',
-{
-hour:'2-digit',
-minute:'2-digit'
-}
-);
-
-
-document
-.getElementById('checkStatus')
-.innerText =
-'Presença registrada hoje às ' + hora + '.';
-
-
-}
-
-
-
-/* ================= SAIR ================= */
 
 function sair(){
 
-abrir('inicio');
+document.getElementById("dashboard").style.display="none";
+
+document.getElementById("inicio").style.display="block";
 
 }
-
-
 
 </script>
 
